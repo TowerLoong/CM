@@ -36,7 +36,7 @@ public class Account {
 	private Integer accSpend;//花费的金额
 	
 	@Column(name = "acc_date" , nullable = true , length = 10) 
-	private Date accDate;//花费的时间（可以为空）
+	private Date accDate;//花费的日期（可以为空）
 
 	@Override
 	public String toString() {

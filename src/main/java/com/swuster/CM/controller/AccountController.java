@@ -1,5 +1,7 @@
 package com.swuster.CM.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
@@ -22,6 +24,15 @@ public class AccountController {
 	public Account addAccount(Account account){
 		accountService.addAccount(account);
 		return account;
+	}
+	
+	@RequestMapping("/findByUserId")
+	@ResponseBody 
+	public List<Account> findAccountByUserId(Integer userId){
+		
+		List<Account> accList = accountService.findAccountByUserId(userId);
+		return accList;
+		
 	}
 	
 }

@@ -18,6 +18,16 @@ public class UserController {
 	@Autowired
 	private IUserService userService;
 	
+	/**
+	 * 镜子的启动页面，
+	 * @return
+	 */
+	@RequestMapping("/start")
+	@ResponseBody 
+	public String cmStart(){
+		return null;
+	}
+	
 	@RequestMapping("/add")
 	@ResponseBody 
 	public User addUser(User user){
